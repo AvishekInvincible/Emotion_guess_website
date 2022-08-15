@@ -12,3 +12,4 @@ def show_predict_page():
     if sentence:
         st.write("Model's prediction : ",model.predict([sentence])[0])
 # conda activate ml
+show_predict_page()
