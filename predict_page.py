@@ -10,7 +10,7 @@ def show_predict_page(df):
     st.title('Emotion Guess :-')
     st.write("""### Enter the text you want to classify """)
     sentence = st.text_input('Input your sentence here:')
-    
+    print(sentence)
     pred = model.predict([sentence])[0]
 
     if sentence:
