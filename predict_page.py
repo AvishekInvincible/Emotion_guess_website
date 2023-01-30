@@ -47,4 +47,4 @@ def show_predict_page(df):
        df3 = df.append(df2)
        df3.to_csv('data.csv')
 # conda activate ml
-show_predict_page()
+show_predict_page(df)
