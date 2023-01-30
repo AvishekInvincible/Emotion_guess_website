@@ -12,16 +12,18 @@ def show_predict_page(df):
     sentence = st.text_input('Input your sentence here:')
     print(sentence)
     pred = model.predict([sentence])[0]
+    data_r  = {'Sentence':sentence,'Pred':1}
+    data_w  = {'Sentence':sentence,'Pred':0}
 
     if sentence:
         st.write("Model's prediction : ",pred)
 
     if st.button("Right"):
-       df2 = pd.DataFrame([str(sentence[0]), 1], columns=['Sentence','Pred'])
+       df2 = df2 = pd.DataFrame(data_r,index=[0])
        df3 = df.append(df2)
        df3.to_csv('data.csv')
     if st.button("Wrong"):
-       df2 = pd.DataFrame([sentence[0], 0], columns=['Sentence','Pred']) 
+       df2 =  pd.DataFrame(data_w,index=[0])
        df3 = df.append(df2)
        df3.to_csv('data.csv')
 # conda activate ml
