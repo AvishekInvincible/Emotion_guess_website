@@ -3,7 +3,7 @@ from joblib import load
 import numpy as np
 
 
-model = load('EmotionalGuess.joblib')
+# model = load('EmotionalGuess.joblib')
 def show_predict_page():
     st.title('Emotion Guess :-')
     st.write("""### Enter the text you want to classify """)
