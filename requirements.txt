@@ -5,7 +5,7 @@ joblib~=0.14.1
 scikit-learn
 # Easy http requests
 requests~=2.26.0
-
+pandas
 # Nice utility to diff Jupyter Notebooks.
 nbdime~=3.1.0
 
