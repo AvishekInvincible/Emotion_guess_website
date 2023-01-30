@@ -1,7 +1,7 @@
 import streamlit as st 
 from joblib import load
 import numpy as np
-
+sudo pip3 install scikit-learn
 
 model = load('EmotionalGuess.joblib')
 def show_predict_page():
