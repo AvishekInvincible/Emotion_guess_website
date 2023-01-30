@@ -18,10 +18,10 @@ def show_predict_page(df):
     if sentence:
         st.write("Model's prediction : ",pred)
     if st.button("Right"):
-       df = df.append(data_r , index =[0])
+       df = df.append(data_r )
        df.to_csv('data.csv')
     elif st.button("Wrong"):
-       df = df.append(data_w , index =[0])
+       df = df.append(data_w )
        df.to_csv('data.csv')
 # conda activate ml
 show_predict_page(df)
