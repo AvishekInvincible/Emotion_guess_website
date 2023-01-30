@@ -2,7 +2,7 @@
 
 # Efficient jobs (caching, parallelism, persistence)
 joblib~=0.14.1
-
+scikit-learn
 # Easy http requests
 requests~=2.26.0
 
