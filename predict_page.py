@@ -9,18 +9,19 @@ model = load('EmotionalGuess.joblib')
 def show_predict_page(df):
     st.title('Emotion Guess :-')
     st.write("""### Enter the text you want to classify """)
-    sentence = st.text_input('Input your sentence here:') 
+    sentence = st.text_input('Input your sentence here:')
+    
     pred = model.predict([sentence])[0]
 
     if sentence:
         st.write("Model's prediction : ",pred)
 
     if st.button("Right"):
-       df2 = pd.DataFrame([str(sentence), 1], columns=['Sentence','Pred'])
+       df2 = pd.DataFrame([str(sentence[0]), 1], columns=['Sentence','Pred'])
        df3 = df.append(df2)
        df3.to_csv('data.csv')
     if st.button("Wrong"):
-       df2 = pd.DataFrame([sentence, 0], columns=['Sentence','Pred']) 
+       df2 = pd.DataFrame([sentence[0], 0], columns=['Sentence','Pred']) 
        df3 = df.append(df2)
        df3.to_csv('data.csv')
 # conda activate ml
